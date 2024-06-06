@@ -11,14 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/rosemary/device.mk)
 
-# Inherit some common Awaken stuff.
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
-
-# Build GCamGO
+#GCamGO
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 
-PRODUCT_NAME := awaken_rosemary
+PRODUCT_NAME := xdroid_rosemary
 PRODUCT_DEVICE := rosemary
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
