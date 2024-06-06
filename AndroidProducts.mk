@@ -5,9 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_rosemary.mk
-
-COMMON_LUNCH_CHOICES := \
-    awaken_rosemary-user \
-    awaken_rosemary-userdebug \
-    awaken_rosemary-eng
+    $(LOCAL_DIR)/xdroid_rosemary.mk
