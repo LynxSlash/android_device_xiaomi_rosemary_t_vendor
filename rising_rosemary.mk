@@ -15,18 +15,22 @@ $(call inherit-product, device/xiaomi/rosemary/device.mk)
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 
-# Inherit common Blaze configurations
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# RisingOS variables
+RISING_MAINTAINER := SKetU-l
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gapps Config
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
-BLAZE_BUILD_TYPE := UNOFFICIAL
-BLAZE_MAINTAINER := Lynxslash
-TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := false
 
-PRODUCT_NAME := blaze_rosemary
+PRODUCT_NAME := rising_rosemary
 PRODUCT_DEVICE := rosemary
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
