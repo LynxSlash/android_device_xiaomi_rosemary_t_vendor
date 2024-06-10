@@ -11,29 +11,30 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/rosemary/device.mk)
 
+# Inherit some common RisingOS stuff.
+$(call inherit-product, vendor/rising/config/rising.mk)
+
 #GCamGO
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 
-# Matrixx 
-MATRIXX_BUILD_TYPE := Unofficial
-MATRIXX_MAINTAINER := Lynxslash
-MATRIXX_CHIPSET := Mediatek Helio G95
-MATRIXX_BATTERY := 5000mah
-MATRIXX_DISPLAY := 1080X2400
+#RisingOS
+RISING_CHIPSET := "Helio G95"
+RISING_MAINTAINER := "LynxSlash"
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Gapps Config
-WITH_GMS := false
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
 
-PRODUCT_NAME := matrixx_rosemary
+PRODUCT_NAME := rising_rosemary
 PRODUCT_DEVICE := rosemary
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
