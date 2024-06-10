@@ -19,6 +19,7 @@ $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Gapps Config
+WITH_GMS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
