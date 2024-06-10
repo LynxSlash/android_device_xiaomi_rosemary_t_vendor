@@ -15,22 +15,25 @@ $(call inherit-product, device/xiaomi/rosemary/device.mk)
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 
-# RisingOS variables
-RISING_MAINTAINER := SKetU-l
+# Matrixx 
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := Lynxslash
+MATRIXX_CHIPSET := Mediatek Helio G95
+MATRIXX_BATTERY := 5000mah
+MATRIXX_DISPLAY := 1080X2400
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Gapps Config
-WITH_GMS := true
-TARGET_CORE_GMS := true
+WITH_GMS := false
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
 
-PRODUCT_NAME := lineage_rosemary
+PRODUCT_NAME := matrixx_rosemary
 PRODUCT_DEVICE := rosemary
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
