@@ -11,9 +11,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/rosemary/device.mk)
 
-# Inherit some common RisingOS stuff.
-$(call inherit-product, vendor/rising/config/rising.mk)
-
 #GCamGO
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
