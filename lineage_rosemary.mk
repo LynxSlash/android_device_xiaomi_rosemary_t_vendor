@@ -18,12 +18,6 @@ $(call inherit-product, vendor/rising/config/rising.mk)
 GCGOP_VENDOR_DIR ?= vendor/kasumi/gcgop
 $(call inherit-product-if-exists, $(GCGOP_VENDOR_DIR)/config.mk)
 
-#RisingOS
-RISING_CHIPSET := "Helio G95"
-RISING_MAINTAINER := "LynxSlash"
-TARGET_ENABLE_BLUR := true
-WITH_GMS := true
-
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -34,7 +28,7 @@ TARGET_USES_BLUR := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
 
-PRODUCT_NAME := rising_rosemary
+PRODUCT_NAME := lineage_rosemary
 PRODUCT_DEVICE := rosemary
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
